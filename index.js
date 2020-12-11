@@ -29,7 +29,6 @@ passport.use(new FacebookStrategy({
     });
   }
 ));
-
 // app.set('views', __dirname + '/views');
 // app.set('view engine', 'ejs');
 app.use(cookieParser());
@@ -39,6 +38,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //app.get('/', (req, res) => {res.send('welcome to e_store')})
-app.use('/', routes);
+app.use(routes);
 
 app.listen(3000);
