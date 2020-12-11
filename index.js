@@ -39,7 +39,7 @@ app.use(session({ secret: 'keyboard cat', key: 'sid'}));
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/', (req, res) => {res.send('welcome to e_store')})
-//app.use('/', routes);
+//app.get('/', (req, res) => {res.send('welcome to e_store')})
+app.use('/', routes);
 
 app.listen(3000);

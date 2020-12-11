@@ -6,16 +6,16 @@ module.exports = (function() {
 
     router.get('/', function(req, res){
 		res.send("hello");
-	  res.render('index', { user: req.user });
+	  //res.render('index', { user: req.user });
 	});
 
-	router.get('/login', function(req, res){
-	  //render page login html
-	});
+	// router.get('/login', function(req, res){
+	//   //render page login html
+	// });
 
-	router.get('/account', ensureAuthenticated, function(req, res){
-	  res.render('account', { user: req.user });
-	});
+	// router.get('/account', ensureAuthenticated, function(req, res){
+	//   res.render('account', { user: req.user });
+	// });
 
 	router.get('/auth/facebook', passport.authenticate('facebook',{scope:'email'}));
 
@@ -34,7 +34,7 @@ module.exports = (function() {
 })();
 
 
-function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) { return next(); }
-  res.redirect('/login')
-}
+// function ensureAuthenticated(req, res, next) {
+//   if (req.isAuthenticated()) { return next(); }
+//   res.redirect('/login')
+// }
