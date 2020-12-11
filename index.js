@@ -1,5 +1,6 @@
 const express = require('express');
 const passport = require('passport');
+const port = process.env.PORT || 8080;
 const FacebookStrategy  = require('passport-facebook').Strategy;
 const session  = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -40,4 +41,4 @@ app.use(passport.session());
 //app.get('/', (req, res) => {res.send('welcome to e_store')})
 app.use(routes);
 
-app.listen(3000);
+app.listen(port);
