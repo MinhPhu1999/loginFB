@@ -20,8 +20,7 @@ passport.deserializeUser(function(obj, done) {
 // Use the FacebookStrategy within Passport.
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_API_KEY,
-    clientSecret: process.env.FACEBOOK_API_SECRECT ,
-    callbackURL: process.env.CALLBACK_URL
+    clientSecret: process.env.FACEBOOK_API_SECRECT
   },
   function(accessToken, refreshToken, profile, done) {
     process.nextTick(function () {
